@@ -1,0 +1,129 @@
+/* Navbar Styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #80d0c7;
+  color: #000; /* Text color changed to black */
+  position: relative;
+}
+
+.logo h1 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.logo .tagline {
+  font-size: 0.9rem;
+  color: #666; /* Subtle gray for tagline */
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  margin-left: 1.5rem;
+}
+
+.nav-links a {
+  color: #000; /* Text color changed to black */
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.nav-links a:hover {
+  color: #f39c12; /* Highlight color on hover */
+}
+
+.search-container {
+  display: none;
+  align-items: center;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #fff; /* Background color changed to white */
+  padding: 1rem;
+  width: 100%;
+  z-index: 10;
+}
+
+.search-container.active {
+  display: flex;
+}
+
+.search-container input {
+  padding: 0.5rem;
+  border: 1px solid #ccc; /* Subtle border for input */
+  border-radius: 4px;
+  width: 100%;
+}
+
+.search-icon {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.search-icon svg {
+  width: 24px;
+  height: 24px;
+  fill: none;
+  stroke: #000; /* Icon color changed to black */
+}
+
+/* Mobile Menu Styles */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-toggle .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #000; /* Bar color changed to black */
+  margin: 4px 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #fff; /* Expanded menu background color changed to white */
+    position: absolute;
+    top: 60px;
+    left: 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin: 1rem 0;
+    text-align: center;
+  }
+
+  .nav-links a {
+    color: #000; /* Text color in expanded menu changed to black */
+  }
+
+  .nav-links a:hover {
+    color: #f39c12; /* Highlight color on hover */
+  }
+
+  .search-icon {
+    order: -1; /* Move search icon to the left */
+  }
+}
