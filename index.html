@@ -70,7 +70,14 @@
         <strong>AIIMS PG</strong>, or building your medical career, <strong>Afrahtafreeh site</strong> is here to guide you with free notes, lectures, and tools.
       </p>
     </section>
-
+<section class="download-app" style="text-align: center; padding: 1.5rem; background: #f1f5f9; border-top: 2px solid #e2e8f0;">
+      <h2 style="margin-bottom: 0.5rem; color: #1e293b;">📱 Download Our Latest App</h2>
+      <p style="margin-bottom: 1rem; color: #475569;">Get instant access to free MBBS lectures and tools.</p>
+      <button id="copyAppLink" style="background-color: #2563eb; color: white; border: none; padding: 0.8rem 1.5rem; font-size: 1rem; border-radius: 8px; cursor: pointer; transition: 0.3s;">
+        Copy Download Link
+      </button>
+      <p id="copyMessage" style="display: none; margin-top: 0.8rem; color: green; font-weight: 500;">✅ Link copied! Visit in your browser to download the app.</p>
+</section>
     <main>
       <section class="platform-buttons">
         <a href="indexb.html" class="platform-btn">
@@ -116,6 +123,17 @@
     <footer>
       <p>&copy; 2024 NEXTPULSE - afrahtafreeh.site | Free MBBS Medical Lectures</p>
     </footer>
+    <script>
+      // Copy app link functionality
+      document.getElementById('copyAppLink').addEventListener('click', function() {
+        const appUrl = "https://afrahtafreeh.site";
+        navigator.clipboard.writeText(appUrl).then(() => {
+          const msg = document.getElementById('copyMessage');
+          msg.style.display = 'block';
+          setTimeout(() => msg.style.display = 'none', 2500);
+        });
+      });
+    </script>
     <script type="module" src="js/main.js"></script>
   </body>
 </html>
